@@ -63,3 +63,20 @@ function description will be used when an alias-description is not provided.
 ```shell
 lambda-uploader --alias myAlias --alias-description 'My alias description' ./myfunc
 ```
+
+### Code coverage
+
+```
+$ coverage run --source lambda_uploader -m py.test
+$ coverage report
+Name                          Stmts   Miss  Cover
+-------------------------------------------------
+lambda_uploader/__init__.py       5      0   100%
+lambda_uploader/config.py        48     13    73%
+lambda_uploader/package.py       77     16    79%
+lambda_uploader/shell.py         64     64     0%
+lambda_uploader/uploader.py      62     62     0%
+lambda_uploader/utils.py         24      1    96%
+-------------------------------------------------
+TOTAL                           280    156    44%
+```
